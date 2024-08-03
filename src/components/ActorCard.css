@@ -1,0 +1,84 @@
+.actor-card {
+  padding: 16px;
+  margin: 16px;
+  text-align: center;
+  width: 190px;
+  height: 234px;
+  border-radius: 30px;
+  background: #212121;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -5px -5px 20px rgb(60, 60, 60);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("https://images.pexels.com/photos/1257860/pexels-photo-1257860.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.actor-card h2 {
+  font-size: 1.5em;
+  color: #f5f5f5;
+}
+
+.actor-card p {
+  font-size: 1em;
+  color: #f5f5f5;
+  font-weight: 600;
+}
+.actor-card .actor-card__details {
+  margin-left: 13%;
+}
+.actor-card .actor-card__details p {
+  text-align: left;
+}
+.actor-card button {
+  --glow-color: rgb(226, 199, 20);
+  --glow-spread-color: rgba(255, 223, 0, 0.5);
+  --enhanced-glow-color: rgba(240, 224, 8, 0.8);
+  --btn-color: rgb(236, 207, 14);
+  border: 0.25em solid var(--glow-color);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.4em 2em;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 0.5em 0.1em var(--glow-color),
+    0 0 2em 0.5em var(--glow-spread-color),
+    inset 0 0 0.4em 0.1em var(--glow-color);
+  text-shadow: 0 0 0.3em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+
+.actor-card button::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(1em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(-35deg) scale(1, 0.6);
+}
+
+.actor-card button:hover {
+  background-color: var(--glow-color);
+  box-shadow: 0 0 0.5em 0.1em var(--glow-color),
+    0 0 2em 0.5em var(--glow-spread-color),
+    inset 0 0 0.4em 0.1em var(--glow-color);
+}
+
+.actor-card button:active {
+  box-shadow: 0 0 0.3em 0.1em var(--glow-color),
+    0 0 1.5em 0.5em var(--glow-spread-color),
+    inset 0 0 0.3em 0.1em var(--glow-color);
+}

@@ -1,0 +1,169 @@
+.actor-detail {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  width: 100%;
+  max-width: 48%;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  overflow-y: auto;
+  border-radius: 30px;
+  background: #f4eed8;
+}
+
+.actor-detail h3 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.actor-detail p {
+  color: #555;
+  font-size: 16px;
+  margin: 5px 0;
+  font-weight: 600;
+}
+
+.actor-detail h4 {
+  color: #333;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.basic-detail {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.basic-detail div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.one-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.actor-detail ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.actor-detail .add {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 5px 0;
+  color: #3f3e3e;
+}
+.actor-detail .films {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.films li {
+  font-weight: 600;
+}
+.one-line h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.close-button {
+  --glow-color: rgb(233, 15, 15);
+  --glow-spread-color: rgba(255, 0, 0, 0.5);
+  --enhanced-glow-color: rgba(236, 11, 11, 0.8);
+  --btn-color: rgb(223, 18, 18);
+  border: 0.25em solid var(--glow-color);
+  margin-top: 2.5rem;
+  padding: 0.4em 2em;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 0.5em 0.1em var(--glow-color),
+    0 0 2em 0.5em var(--glow-spread-color),
+    inset 0 0 0.4em 0.1em var(--glow-color);
+  text-shadow: 0 0 0.3em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+
+.close-button::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(1em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(-35deg) scale(1, 0.6);
+}
+
+.close-button:hover {
+  background-color: var(--glow-color);
+  box-shadow: 0 0 0.5em 0.1em var(--glow-color),
+    0 0 2em 0.5em var(--glow-spread-color),
+    inset 0 0 0.4em 0.1em var(--glow-color);
+}
+
+.close-button:active {
+  box-shadow: 0 0 0.3em 0.1em var(--glow-color),
+    0 0 1.5em 0.5em var(--glow-spread-color),
+    inset 0 0 0.3em 0.1em var(--glow-color);
+}
+
+@media (max-width: 768px) {
+  .actor-detail {
+    max-width: 80%;
+    padding: 15px;
+  }
+  .actor-detail h3 {
+    font-size: 20px;
+  }
+
+  .actor-detail p {
+    font-size: 14px;
+  }
+
+  .actor-detail h4 {
+    font-size: 18px;
+  }
+
+  .close-button {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .actor-detail {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .actor-detail h3 {
+    font-size: 18px;
+  }
+
+  .actor-detail p {
+    font-size: 12px;
+  }
+
+  .actor-detail h4 {
+    font-size: 16px;
+  }
+
+  .close-button {
+    font-size: 12px;
+  }
+}

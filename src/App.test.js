@@ -1,8 +1,17 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen, waitFor } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders actor list", async () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  await waitFor(() => {
+    const spinner = screen.queryByRole("progressbar");
+    expect(spinner).not.toBeInTheDocument();
+  });
+  const headingElement = await screen.findByText((content, element) => {
+    return (
+      element.tagName.toLowerCase() === "h1" && /Starwars Actors/i.test(content)
+    );
+  });
+  expect(headingElement).toBeInTheDocument();
 });

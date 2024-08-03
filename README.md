@@ -16,4 +16,3 @@ Your task is to create react.js application and fetch a list of actors with the 
 
 5. Errors and loading states should be handled.
 6. Write unit tests to ensure that the components behave as expected.
-   
