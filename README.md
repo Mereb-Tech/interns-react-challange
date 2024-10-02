@@ -1,19 +1,52 @@
-Contains React.Js code challenge for internship applicants to Mereb Technologies. Please carefully follow the instructions given below.
+# Star Wars Actors
 
-**Create Simple React.Js application**
+## Description
 
-Your task is to create react.js application and fetch a list of actors with the films they have been involved from a given API endpoint and render the list of actors on the page. Each actor should be displayed as a card with its name, height,birth_year and an "Detail" button.
+Star Wars Actors is a React-based application that fetches and displays a list of actors from the Star Wars universe. Users can click on an actor's card to view detailed information, including their attributes and film appearances.
 
-**Details:**
+## Features
 
-1. Fetch the product data from the following API endpoint: https://swapi.py4e.com/api/people/.
+- Fetches actor data from an API.
+- Displays actors in a responsive layout.
+- Allows users to view detailed information about each actor.
+- Interactive design with a close button to hide details.
 
-2. Display the list of actors as cards. Each card should include the product name, height,birth_year and an "Detail" button.
+## Technologies Used
 
-3. When the "Detail" button is clicked, the selected actor should be displayed in separated component with the detail of an actor.
+- **React**: JavaScript library for building user interfaces.
+- **Redux Toolkit**: For state management.
+- **React Testing Library**: For unit testing components.
+- **CSS**: For styling the application.
 
-4. Use appropriate CSS styles to make the actor list visually appealing.
+## Screenshots
 
-5. Errors and loading states should be handled.
-6. Write unit tests to ensure that the components behave as expected.
-   
+Here are some screenshots of the application for all sizes(large , medium and small):
+
+# Desktop
+
+![alt text](image.png)
+
+# Tablet
+
+![alt text](tablet.jpg)
+
+# Mobile 
+
+![alt text](mobile.jpg)
+
+# Detail Component
+
+![alt text](image-1.png)
+
+## Installation
+
+1. Clone the repository:
+   git clone https://github.com/HanaGt/React-Challenge.git
+
+2. Navigate to the project directory:
+    cd React-Challenge
+3. Install the dependencies:
+    npm install
+4. Start the application:
+    npm start
+5. Open your browser and visit http://localhost:3000 to view the application.
