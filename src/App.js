@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Actors from "./pages/actors";
+import ActorDetail from "./pages/actor_detail";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="bg-slate-800 min-h-screen flex flex-col">
+      <header className="bg-primary text-white font-bold text-4xl text-center py-12">
+        Popular Actors
       </header>
+      {/* routes */}
+      <Routes>
+        {/* list of actors page */}
+        <Route path="/" element={<Actors />} />
+
+        {/* detail page of an actor */}
+        <Route path="/actor" element={<ActorDetail />} />
+      </Routes>
     </div>
   );
 }
